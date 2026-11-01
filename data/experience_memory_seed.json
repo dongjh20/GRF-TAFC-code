@@ -1,0 +1,10 @@
+{
+  "_comment": "Initial experience memory (Sec. 3.2.2). Copied to runtime/experience_memory.json on first run; reflection insights are appended there. Operators may also add entries manually.",
+  "entries": [
+    {
+      "key": "Reduction of available lanes from three to two for a seven-CAV formation with a 2–3–2 lane-wise distribution.",
+      "value": "Allocate four target positions to Lane 2 and three to Lane 1 rather than the reverse, as this reduces the required number of lane changes from four to three.",
+      "source": "seed"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "_comment": "Domain knowledge graph (Sec. 3.2.2). Built offline. This demo contains a single knowledge item: yield to high-priority vehicles (ambulances) by clearing their lane. Add more entities/relations for task interpretation, traffic regulations and formation-level safety.",
+  "entities": [
+    {
+      "id": "ambulance",
+      "name": "ambulance",
+      "category": "entity",
+      "aliases": ["emergency vehicle", "ambulance siren", "medical vehicle"]
+    },
+    {
+      "id": "high_priority_vehicle",
+      "name": "high-priority vehicle",
+      "category": "entity",
+      "aliases": ["priority vehicle"]
+    },
+    {
+      "id": "yield_to_high_priority_vehicle",
+      "name": "yield to a high-priority vehicle",
+      "category": "human_intent",
+      "aliases": ["watch out for the ambulance", "make way", "give way", "let the ambulance pass"]
+    },
+    {
+      "id": "clear_high_priority_vehicle_lane",
+      "name": "clear the lane occupied by the high-priority vehicle",
+      "category": "traffic_regulation",
+      "aliases": [],
+      "knowledge": "CAVs should clear the lane for high-priority vehicles such as ambulances."
+    }
+  ],
+  "relations": [
+    {"head": "ambulance", "relation": "IS_A", "tail": "high_priority_vehicle"},
+    {"head": "yield_to_high_priority_vehicle", "relation": "APPLIES_TO", "tail": "high_priority_vehicle"},
+    {"head": "yield_to_high_priority_vehicle", "relation": "MAPS_TO", "tail": "clear_high_priority_vehicle_lane"},
+    {"head": "high_priority_vehicle", "relation": "REQUIRES", "tail": "clear_high_priority_vehicle_lane"}
+  ]
+}
