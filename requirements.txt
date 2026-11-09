@@ -1,0 +1,2 @@
+google-genai>=1.50.0
+# ROS 2 (rclpy, std_msgs) is only needed for --outcome ros; install it via your ROS 2 distribution.
